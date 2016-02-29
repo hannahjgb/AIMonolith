@@ -39,6 +39,8 @@ List<Status> flintTweet12;
 List<Status> flintJournalTweet;
 
 //strings to hold the tweets
+String tweetText;
+
 String searchString;
 String tweetString1;
 String tweetString2;
@@ -178,6 +180,7 @@ void setup(){
             if(status.getUser().getLang().equalsIgnoreCase("en")
                     || status.getUser().getLang().equalsIgnoreCase("en_US")) {
                 System.out.println(status.getUser().getName() + " :: " + status.getText() + " :: " + status.getGeoLocation());
+                tweetText = status.getText();
             }
         }
         public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {}
